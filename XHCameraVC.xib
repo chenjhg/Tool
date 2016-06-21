@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XHCameraVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Gf-iZ-tuG">
+                    <rect key="frame" x="0.0" y="448" width="320" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEP-HR-8FP">
+                            <rect key="frame" x="116" y="16" width="88" height="88"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hEP-HR-8FP" secondAttribute="height" multiplier="1:1" id="U2h-lv-hFM"/>
+                            </constraints>
+                            <state key="normal" image="photoBtn"/>
+                            <connections>
+                                <action selector="clickTakePhoto:" destination="-1" eventType="touchUpInside" id="CRq-NK-Yy5"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-AY-CmI">
+                            <rect key="frame" x="10" y="64" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="aYZ-Ut-XC0"/>
+                                <constraint firstAttribute="width" constant="50" id="nzb-Yr-dOs"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeCamera:" destination="-1" eventType="touchUpInside" id="Nyg-HR-Gme"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hEP-HR-8FP" firstAttribute="bottom" secondItem="8Gf-iZ-tuG" secondAttribute="bottom" multiplier="0.7" constant="20" symbolic="YES" id="2zX-fC-y6P"/>
+                        <constraint firstItem="hEP-HR-8FP" firstAttribute="bottom" secondItem="LcA-AY-CmI" secondAttribute="bottom" id="3Lg-xD-SkM"/>
+                        <constraint firstItem="LcA-AY-CmI" firstAttribute="leading" secondItem="8Gf-iZ-tuG" secondAttribute="leading" constant="10" id="BVO-3X-Oer"/>
+                        <constraint firstItem="hEP-HR-8FP" firstAttribute="centerY" secondItem="8Gf-iZ-tuG" secondAttribute="centerY" id="Go4-xN-Pgt"/>
+                        <constraint firstAttribute="height" constant="120" id="KK7-7N-XmP"/>
+                        <constraint firstItem="hEP-HR-8FP" firstAttribute="centerX" secondItem="8Gf-iZ-tuG" secondAttribute="centerX" id="X2d-gz-8N4"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoboder" translatesAutoresizingMaskIntoConstraints="NO" id="qnP-Z9-BYT">
+                    <rect key="frame" x="20" y="70" width="280" height="358"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lak-Cp-vJc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="DHy-jF-f5W"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Lak-Cp-vJc" secondAttribute="trailing" id="14m-tN-hnc"/>
+                <constraint firstItem="Lak-Cp-vJc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Is6-Cm-x3U"/>
+                <constraint firstItem="qnP-Z9-BYT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="S6e-PI-qJu"/>
+                <constraint firstAttribute="trailing" secondItem="8Gf-iZ-tuG" secondAttribute="trailing" id="VXA-5V-A0R"/>
+                <constraint firstItem="8Gf-iZ-tuG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y29-Fo-A2A"/>
+                <constraint firstAttribute="bottom" secondItem="8Gf-iZ-tuG" secondAttribute="bottom" id="Y7k-Ws-Ui9"/>
+                <constraint firstAttribute="trailing" secondItem="qnP-Z9-BYT" secondAttribute="trailing" constant="20" id="bHF-qS-53p"/>
+                <constraint firstItem="8Gf-iZ-tuG" firstAttribute="top" secondItem="qnP-Z9-BYT" secondAttribute="bottom" constant="20" id="dQ7-Rb-Xr1"/>
+                <constraint firstItem="qnP-Z9-BYT" firstAttribute="top" secondItem="Lak-Cp-vJc" secondAttribute="bottom" constant="20" id="eeF-aS-atW"/>
+                <constraint firstItem="Lak-Cp-vJc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zDh-BU-8IP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <point key="canvasLocation" x="254" y="417"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="photoBtn" width="66" height="66"/>
+        <image name="photoboder" width="250" height="350"/>
+    </resources>
+</document>
